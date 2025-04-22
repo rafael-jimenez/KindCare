@@ -1,204 +1,266 @@
 :root {
-    --kindcare-blue: #808080;
-    --kindcare-accent: #0086c4;
-    --kindcare-light: #ffffff;
-    --kindcare-text-dark: #303d47;
-    --kindcare-text-light: #ffffff;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 70px;
-  }
-  
-  body {
-    background-color: var(--kindcare-light);
-    color: var(--kindcare-text-dark);
-    overflow-x: hidden;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background: var(--kindcare-blue);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    height: 70px;
-  }
-  
-  .header-left {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  
+  --kindcare-header-bg: #ffffff;
+  --kindcare-button-bg: #606060;
+  --kindcare-accent: #1911b4;
+  --kindcare-light: #ffffff;
+  --kindcare-text-dark: #303d47;
+  --kindcare-text-light: #ffffff;
+
+  --kindcare-nav-text: #0086c4;
+  --kindcare-button-text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  background-color: var(--kindcare-light);
+  color: var(--kindcare-text-dark);
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: var(--kindcare-header-bg);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 5px 0;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: var(--kindcare-nav-text);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--kindcare-accent);
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: var(--kindcare-nav-text);
+  cursor: pointer;
+  user-select: none;
+}
+
+section {
+  padding: 100px 5%;
+  text-align: center;
+  background-color: var(--kindcare-light);
+  scroll-margin-top: 80px;
+}
+
+section#home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('KCfiles/KCpcBG.png') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+button {
+  font-size: clamp(14px, 2vw, 17px);
+  font-weight: bold;
+  border: none;
+  border-radius: 0.75em;
+  background: var(--kindcare-button-bg);
+  color: var(--kindcare-button-text);
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--kindcare-accent);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--kindcare-header-bg);
+  color: var(--kindcare-text-light);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
   .header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
   }
-  
-  .logo-link {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 5px 0;
-  }
-  
-  .logo-img {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
+
+  .hamburger {
     display: block;
   }
-  
+
   nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
-    color: var(--kindcare-light);
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: var(--kindcare-accent);
-  }
-  
-  .hamburger {
     display: none;
-    font-size: 30px;
-    color: var(--kindcare-light);
-    cursor: pointer;
-    user-select: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--kindcare-header-bg);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
-  section {
-    padding: 100px 5%;
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0;
     text-align: center;
-    background-color: var(--kindcare-light);
-    scroll-margin-top: 80px;
   }
-  
+
+  nav ul li a {
+    font-size: 18px;
+    color: var(--kindcare-nav-text);
+    padding: 15px 0;
+    display: block;
+    width: 100%;
+  }
+
+  nav ul li a:hover {
+    background-color: var(--kindcare-accent);
+  }
+
+  .logo-img {
+    max-height: 48px;
+  }
+
   section#home {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('KCfiles/KCpcBG.png') no-repeat center center;
+    background: url('KCfiles/KCmobileBG.png') no-repeat center center;
     background-size: cover;
-    text-align: center;
   }
-  
-  h2 {
-    font-size: clamp(40px, 6vw, 80px);
-    font-weight: 700;
-    margin-bottom: 20px;
+}
+/* Specialized Programs Section */
+#special-programs {
+  background-color: var(--kindcare-light);
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.program-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.program-card {
+  background-color: #f6f6f6;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.program-card h3 {
+  font-size: 22px;
+  color: var(--kindcare-accent);
+  margin-bottom: 10px;
+}
+
+.program-card p {
+  font-size: 16px;
+  color: var(--kindcare-text-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .program-cards {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
+
+  .program-card {
+    width: 100%;
   }
-  
-  button {
-    font-size: clamp(14px, 2vw, 17px);
-    font-weight: bold;
-    border: none;
-    border-radius: 0.75em;
-    background: var(--kindcare-blue);
-    color: var(--kindcare-light);
-    padding: 0.75em 1.5em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
-    background: var(--kindcare-accent);
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--kindcare-blue);
-    color: var(--kindcare-light);
-  }
-  
-  /* Mobile styles */
-  @media (max-width: 768px) {
-    .header-right {
-      flex-direction: column;
-      align-items: flex-end;
-      width: 100%;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-  
-    nav ul {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: var(--kindcare-blue);
-      position: absolute;
-      top: 70px;
-      left: 0;
-      margin: 0;
-      padding: 0;
-      z-index: 999;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-  
-    nav ul.active {
-      display: flex;
-    }
-  
-    nav ul li {
-      margin: 0;
-      text-align: center;
-    }
-  
-    nav ul li a {
-      font-size: 18px;
-      color: var(--kindcare-light);
-      padding: 15px 0;
-      display: block;
-      width: 100%;
-    }
-  
-    nav ul li a:hover {
-      background-color: var(--kindcare-accent);
-    }
-  
-    .logo-img {
-      max-height: 48px;
-    }
-  
-    section#home {
-      background: url('KCfiles/KCmobileBG.png') no-repeat center center;
-      background-size: cover;
-    }
-  }
-  
+}
