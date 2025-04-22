@@ -10,7 +10,6 @@
     function toggleMenu() {
       const menu = document.getElementById("nav-menu");
       const icon = document.getElementById("menu-icon");
-
       menu.classList.toggle("active");
       icon.textContent = menu.classList.contains("active") ? "✖" : "☰";
     }
@@ -19,7 +18,6 @@
       const navLinks = document.querySelectorAll("#nav-menu a");
       const menu = document.getElementById("nav-menu");
       const icon = document.getElementById("menu-icon");
-
       navLinks.forEach(link => {
         link.addEventListener("click", () => {
           if (menu.classList.contains("active")) {
@@ -68,28 +66,27 @@
     <section id="aboutus">
       <h2>About KindCare</h2>
       <p class="subheading">Trusted professionals delivering seamless care experiences with heart and professionalism.</p>
-      <p>KindCare was created to meet the growing care demands of Alberta families. Our foundation is built on kindness, professionalism, knowledge, and trustworthiness.</p>
+      <p>KindCare was founded with the mission to bridge the gap in Alberta’s care system. We offer certified, compassionate, and personalized support for families, seniors, and individuals with disabilities — ensuring peace of mind and a better quality of life.</p>
     </section>
 
-    <!-- NEW: Specialized Programs Section -->
     <section id="special-programs">
-      <h2>Specialized Programs for Children</h2>
-      <p class="subheading">Tailored care programs to support every stage of early development.</p>
+      <h2>Our Core Care Services</h2>
+      <p class="subheading">Compassion-led programs designed for every stage and circumstance of life.</p>
       <div class="program-cards">
         <div class="program-card">
-          <img src="KCfiles/your-image1.jpg" alt="Maternal" />
-          <h3>Maternal</h3>
-          <p>[Description for the Maternal program]</p>
+          <img src="KCfiles/KCchildcare.png" alt="Childcare" />
+          <h3>Childcare</h3>
+          <p>Safe, nurturing environments for children of all ages. Our caregivers are experienced in early childhood education and development, offering flexible scheduling and home-based options.</p>
         </div>
         <div class="program-card">
-          <img src="KCfiles/your-image2.jpg" alt="Pre-K" />
-          <h3>Pre-K</h3>
-          <p>[Description for the Pre-K program]</p>
+          <img src="KCfiles/KCdisability.png" alt="Disability Support" />
+          <h3>Disability Support</h3>
+          <p>We provide empathetic, individualized care for people with physical or developmental disabilities. Services include daily support, skill-building, and family respite solutions.</p>
         </div>
         <div class="program-card">
-          <img src="KCfiles/your-image3.jpg" alt="Preschool" />
-          <h3>Preschool</h3>
-          <p>[Description for the Preschool program]</p>
+          <img src="KCfiles/Senior Care.png" alt="Senior Care" />
+          <h3>Senior Care</h3>
+          <p>Helping seniors thrive at home. From companionship to assistance with daily tasks, our trained staff ensures dignity, independence, and comfort for elderly clients.</p>
         </div>
       </div>
     </section>
@@ -120,7 +117,7 @@
     <section id="market">
       <h2>Market & Impact of KindCare</h2>
       <p class="subheading">Meeting Alberta's urgent and rising care needs with scalable heart-led solutions.</p>
-      <p>Over 100,000 Albertans live with disabilities. The senior population is set to double by 2040. KindCare fills the gap with reliable, compassionate, and scalable care services.</p>
+      <p>Over 100,000 Albertans live with disabilities. The senior population is set to double by 2040. KindCare is positioned to meet these growing needs with dependable, scalable, and compassionate care solutions.</p>
     </section>
 
     <section id="contactus">
