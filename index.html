@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KindCare</title>
+  <link rel="icon" type="image/png" href="KCfiles/mapleleaf.png" />  
+  <link rel="stylesheet" href="styles.css" />
+  <script defer>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      const icon = document.getElementById("menu-icon");
+
+      menu.classList.toggle("active");
+      icon.textContent = menu.classList.contains("active") ? "✖" : "☰";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll("#nav-menu a");
+      const menu = document.getElementById("nav-menu");
+      const icon = document.getElementById("menu-icon");
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          if (menu.classList.contains("active")) {
+            menu.classList.remove("active");
+            icon.textContent = "☰";
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="#home" class="logo-link">
+        <img src="KCfiles/KClogowhite.png" alt="KindCare Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="header-right">
+      <div class="hamburger" onclick="toggleMenu()" id="menu-icon">☰</div>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#WhyKindCare">Why KindCare</a></li>
+          <li><a href="#market">Market & Impact</a></li>
+          <li><a href="#contactus">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="container">
+        <img src="KCfiles/KClogo.png" alt="KindCare Logo" style="max-width: 100%; height: auto;" />
+        <p class="subheading">Delivering certified, compassionate childcare, disability, and senior support with 24/7 availability across Alberta.</p>
+        <div class="button-container">
+          <a href="#services"><button>Explore Services</button></a>
+          <a href="#contactus"><button>Get in Touch</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutus">
+      <h2>About KindCare</h2>
+      <p class="subheading">Trusted professionals delivering seamless care experiences with heart and professionalism.</p>
+      <p>KindCare was created to meet the growing care demands of Alberta families. Our foundation is built on kindness, professionalism, knowledge, and trustworthiness.</p>
+    </section>
+
+    <section id="services">
+      <h2>Services by KindCare</h2>
+      <p class="subheading">Compassionate care for every need, at every stage.</p>
+      <div class="button-container">
+        <button>Childcare</button>
+        <button>Disability Support</button>
+        <button>Senior Care</button>
+        <button>Behavioural Support</button>
+        <button>Custom Care Plans</button>
+      </div>
+    </section>
+
+    <section id="WhyKindCare">
+      <h2>Why Choose KindCare</h2>
+      <p class="subheading">The KindCare difference is in the details — and in our heart.</p>
+      <ul style="list-style: inside; max-width: 800px; margin: auto; text-align: left;">
+        <li>✔ Certified, kind, and compassionate professionals</li>
+        <li>✔ Personalized care plans tailored to each family</li>
+        <li>✔ Transparent, affordable pricing</li>
+        <li>✔ Local and community-first approach</li>
+      </ul>
+    </section>
+
+    <section id="market">
+      <h2>Market & Impact of KindCare</h2>
+      <p class="subheading">Meeting Alberta's urgent and rising care needs with scalable heart-led solutions.</p>
+      <p>Over 100,000 Albertans live with disabilities. The senior population is set to double by 2040. KindCare fills the gap with reliable, compassionate, and scalable care services.</p>
+    </section>
+
+
+    <section id="contactus">
+      <h2>Contact KindCare</h2>
+      <p class="subheading">Have questions or need support? We’re just a message away.</p>
+      <p>📍 Calgary, Alberta<br>
+        📧 <a href="mailto:hello@thekindcare.ca">hello@thekindcare.ca</a><br>
+        📞 222-222-222
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 KindCare. There’s no care like Canadian care.
+  </footer>
+</body>
+</html>
