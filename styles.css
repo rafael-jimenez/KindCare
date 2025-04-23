@@ -574,3 +574,35 @@ footer {
 .program-card:hover {
   transform: translateY(-5px);
 }
+.why-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.why-card {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+}
+
+.why-card h3 {
+  font-size: 20px;
+  color: var(--kindcare-accent);
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 16px;
+  color: var(--kindcare-text-dark);
+  line-height: 1.6;
+}
