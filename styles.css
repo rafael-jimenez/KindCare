@@ -15,7 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -242,4 +242,154 @@ footer {
 .program-card p {
   font-size: 16px;
   color: var(--kindcare-text-dark);
+}
+#aboutus {
+  padding: 100px 5%;
+  background-color: var(--kindcare-light);
+}
+
+.aboutus-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.aboutus-left {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.aboutus-left h2 {
+  font-size: 48px;
+  color: var(--kindcare-accent);
+}
+
+.aboutus-left .subheading {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--kindcare-text-dark);
+  margin-top: 20px;
+}
+
+.aboutus-right {
+  flex: 2;
+  min-width: 300px;
+}
+
+.about-box {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.about-box h3 {
+  font-size: 24px;
+  color: var(--kindcare-accent);
+  margin-bottom: 10px;
+}
+
+.about-box p {
+  font-size: 16px;
+  color: var(--kindcare-text-dark);
+  line-height: 1.6;
+}
+
+.about-values {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.about-values li {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.about-quote {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--kindcare-accent);
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .aboutus-container {
+    flex-direction: column;
+  }
+
+  .aboutus-left, .aboutus-right {
+    max-width: 100%;
+  }
+
+  .about-box, .about-quote {
+    text-align: center;
+  }
+
+  .aboutus-left h2 {
+    text-align: center;
+  }
+}
+/* About Section Responsive Columns */
+.about-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 280px;
+  max-width: 40%;
+  text-align: left;
+}
+
+.about-right {
+  flex: 1;
+  min-width: 280px;
+  max-width: 55%;
+  text-align: left;
+}
+
+#aboutus h2 {
+  font-size: clamp(40px, 6vw, 80px);
+  color: var(--kindcare-accent);
+}
+
+#aboutus .subheading {
+  font-size: 18px;
+  margin-top: 10px;
+  color: var(--kindcare-text-dark);
+}
+
+.about-right h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: var(--kindcare-accent);
+}
+
+.about-right p, .about-right em {
+  font-size: 16px;
+  color: var(--kindcare-text-dark);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left, .about-right {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-right p, .about-right em, .about-right h3 {
+    text-align: center;
+  }
 }
