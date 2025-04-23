@@ -524,3 +524,53 @@ footer {
   color: var(--kindcare-text-dark);
   line-height: 1.5;
 }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.service-card {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.service-card .icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  color: var(--kindcare-accent);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: var(--kindcare-text-dark);
+  line-height: 1.6;
+}
+.services-grid.narrow {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 720px;
+  margin: 40px auto 0 auto; /* centers the grid */
+}
+.program-card:hover {
+  transform: translateY(-5px);
+}
