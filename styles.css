@@ -112,8 +112,18 @@ section#home {
 h2 {
   font-size: clamp(40px, 6vw, 80px);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0; /* 👈 No top margin, 20px bottom only */
 }
+
+.subheading {
+  font-size: clamp(16px, 2.5vw, 24px);
+  font-weight: 500;
+  color: var(--kindcare-text-dark);
+  margin: 0 auto 30px auto; /* 👈 No top margin, centered */
+  max-width: 800px;
+  line-height: 1.6;
+}
+
 
 .button-container {
   display: flex;
@@ -392,4 +402,125 @@ footer {
   .about-right p, .about-right em, .about-right h3 {
     text-align: center;
   }
+}
+#home .subheading {
+  font-size: clamp(16px, 2.5vw, 28px); /* Adjust max value if needed */
+  font-weight: 500;
+  color: var(--kindcare-text-dark);
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 60px 5%; /* reduce padding top and bottom */
+  }
+
+  h2 {
+    margin: 0 0 15px 0; /* smaller bottom margin */
+  }
+
+  .subheading {
+    margin: 0 auto 20px auto; /* tighter bottom margin */
+  }
+
+  .program-card {
+    margin-bottom: 30px; /* if cards stack, keep consistent spacing */
+  }
+
+  #WhyKindCare ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .about-right em {
+    display: block;
+    margin-top: 15px;
+  }
+
+  #special-programs,
+  #services,
+  #WhyKindCare,
+  #market,
+  #contactus {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.about-left .subheading {
+  font-size: clamp(18px, 2.5vw, 22px); /* Increase upper limit */
+  font-weight: 500;
+  margin-top: 10px;
+}
+.about-right h3 {
+  font-size: clamp(20px, 3vw, 26px); /* Larger and responsive */
+  margin-top: 10px;
+}
+
+.about-right p {
+  font-size: clamp(16px, 2vw, 20px); /* Slightly bigger for readability */
+}
+.about-right em {
+  font-size: clamp(18px, 2vw, 22px);
+  font-style: italic;
+  color: var(--kindcare-accent);
+  display: block;
+  margin-top: 15px;
+}
+@media (min-width: 769px) {
+  .program-card {
+    width: 420px;         /* even wider */
+    padding: 40px 30px;   /* more spacious */
+  }
+
+  .program-card h3 {
+    font-size: 26px;      /* bolder section titles */
+  }
+
+  .program-card p {
+    font-size: 20px;      /* easy-to-read paragraph size */
+    line-height: 1.8;
+  }
+}
+.program-cards {
+  align-items: stretch;
+}
+.program-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.service-item {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+}
+
+.service-item h3 {
+  font-size: 22px;
+  color: var(--kindcare-accent);
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 16px;
+  color: var(--kindcare-text-dark);
+  line-height: 1.5;
 }
